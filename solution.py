@@ -20,10 +20,14 @@ def main():
     words = input_list[1:num_words + 1]
     queries = input_list[num_words + 1:]
     
-    graph = Graph()
+    graph = Graph(words)
     
-    graph.create_graph(words)
+    graph.find_edges()
     
-    
+    for query in queries:
+        query_pair = query.split(" ")
+        print(graph.shortest_path(query_pair[0], query_pair[1]))
+        
+        
 if __name__ == "__main__":
     main()
