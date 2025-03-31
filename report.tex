@@ -7,7 +7,7 @@
 \pagestyle{empty}
 
 \title{Word ladders report}
-\author{Author 1 and Author 2}
+\author{Ludwig Cederberg and Luc Sommerland}
 
 \begin{document}
   \maketitle
@@ -15,9 +15,15 @@
   \section{Results}
 
   \todo[inline]{Briefly comment the results, did the script say all your solutions were correct? Approximately how long time does it take for the program to run on the largest input? What takes the majority of the time?}
+  The two largest files take around 10 seconds to run. 
+  All solutions are correct.
+  The creation of edges takes the longest time O(n^2)
 
   \section{Implementation details}
 
   \todo[inline]{How did you implement the solution? Which data structures were used? Which modifications to these data structures were used? What is the overall running time? Why?}
+  We used a python class to represent the nodes and the graph. Each node object has a string attribute and a list of neighbor nodes. 
+  For the shortest path function we use a dictionary for keeping track of visited nodes and previous nodes. 
+  15 seconds.  
 
 \end{document}

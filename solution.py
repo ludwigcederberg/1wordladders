@@ -9,13 +9,12 @@ def process_input(input_data):
 
     
 def main():
-
+    
     input_data = sys.stdin.read().strip()
     input_list = process_input(input_data)
 
     parts = input_list[0].split()
     num_words = int(parts[0])
-    num_queries = int(parts[1])
 
     words = input_list[1:num_words + 1]
     queries = input_list[num_words + 1:]
@@ -27,6 +26,7 @@ def main():
     for query in queries:
         query_pair = query.split(" ")
         print(graph.shortest_path(query_pair[0], query_pair[1]))
+        
         
         
 if __name__ == "__main__":
